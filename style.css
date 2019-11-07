@@ -1,39 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
+
 body {
 	background-color: #0093C6;
+	font-family: McLaren;
+	color: #ECC2E2;
 }
 
-header {
+nav {
 	background-color: #E3C73B;
 	padding: 5px;
 	margin: -8px;
 }
 
-#allheader {
+#nav {
 	display: flex;
 }
 
 #name  {
 	color: #F8963A;
-}
-
-#ul {
-	float: right;
-}
-
-#div1 {
-	font-size: 22px;
-
-	display: flex;
-}
-
-li {
-	overflow: hidden;
-	margin: 10px 30px auto auto;
-}
-
-a {
-	text-decoration: none;
-	color: white;
 }
 
 #scoreLabel {
@@ -45,8 +29,8 @@ a {
 	height: 50px;
 	text-align: center;
 	font-size: 20px;
-	position: absolute;
-	left: 40%;
+	position: relative;
+	left: 33%;
 }
 
 #user {
@@ -66,17 +50,40 @@ a {
 	top: 20px;
 	border: 3px solid #E3C73B;
 	border-radius: 3px;
+	color: black;
 }
 
 #score {
 	font-size: 40px;
 	font-weight: 16px;
 	position: absolute;
-	top: 10px;
+	top: -28px;
 	left: 110px;
 }
 
-#theJuice {
+#game {
 	position: absolute;
-	top: 50px;
+	left: 25%;
+}
+
+#result {
+	position: relative;
+	left: 18%;
+}
+
+#choices {
+	display: flex;
+	position: relative;
+	left: -11%;
+}
+
+img {
+	width: 200px;
+	height: 300px;
+	margin: auto 20px auto auto;
+}
+
+#rock {
+	width: 250px;
+	height: 250px;
 }
