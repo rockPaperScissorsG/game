@@ -75,3 +75,8 @@ a {
 	top: 10px;
 	left: 110px;
 }
+
+#theJuice {
+	position: absolute;
+	top: 50px;
+}
