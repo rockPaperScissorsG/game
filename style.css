@@ -1,0 +1,13 @@
+body {
+	background-color: #0093C6;
+}
+
+header {
+	background-color: #E3C73B;
+	padding: 18px;
+	margin: -8px;
+}
+
+#div1 {
+	display: flex;
+}
