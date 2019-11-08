@@ -28,7 +28,7 @@ section {
 	border: 3px solid white;
 	border-radius: 20px;
 	margin-top: 20px; 
-	margin-left: -20px;
+	margin-left: 0px;
 	padding: 10px;
 	width: 250px;
 	height: 50px;
@@ -61,18 +61,17 @@ section {
 #score {
 	font-size: 40px;
 	font-weight: 16px;
-	position: absolute;
-	top: -28px;
-	left: 110px;
+	display: flex;
+	margin-left: 70px; 
 }
 
 #game {
-	margin-left: -35%;
+	margin-left: -46%;
 }
 
 #result {
 	text-align: center;
-	margin-left: -335px;
+	margin-left: -230px;
 }
 
 #choices {
@@ -81,14 +80,14 @@ section {
 }
 
 img {
-	width: 200px;
-	height: 300px;
+	width: 150px;
+	height: 200px;
 
 }
 
 #rock {
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	margin-left: 40px;
 }
 
@@ -97,5 +96,24 @@ img {
 }
 
 #scissors {
+	margin-left: 70px;
+}
+
+#compChoices {
+	display: flex;
+	align-items: center; 
+}
+
+#Crock {
+	width: 200px;
+	height: 200px;
+	margin-left: 40px;
+}
+
+#Cpaper {
+	margin-left: 70px;
+}
+
+#Cscissors {
 	margin-left: 70px;
 }

@@ -1,26 +1,22 @@
 var userS = 0;
 var campS = 0;
-var s = "s";
-var p = "p";
-var r = "r";
 const userScore = $("#userScore");
 const campScore = $("#campScore");
-const rock = $("#rock");
-const paper = $("#paper");
-const scissors = $("#scissors");
+const rock = $("#Crock");
+const paper = $("#Cpaper");
+const scissors = $("#Cscissors");
 const result = $("#result");
 
 function randomChoices() {
-	var choices = ["r", "p", "s"];
+	var choices = [rock, paper, scissors];
 	var randomIndex = Math.floor(Math.random() * 3);
 	return choices[randomIndex];
 }
 
-var drawcounter = 0;
+
 function draw() {
-	drawcounter++;
-	result.html("it's Draw " + drawcounter + " times in this turn, you picked the same choice as the computer.")
-	
+	result.html("it's Draw, you picked the same choice as the computer.");
+	console.log("d")
 }
 
 function win() {
@@ -34,10 +30,12 @@ function win() {
 		campS = 0;
 		result.html("you win the turn, you can try an other turn.");
 		userScore.html(userS);
+		campScore.html(campS);
 		alert("you win the turn, you can try an other turn.");
 		drawcounter = 0;
 
 	}
+	console.log("w")
 }
 
 function loss() {
@@ -53,45 +51,118 @@ function loss() {
 		campScore.html(campS);
 		userScore.html(userS);
 		alert("you lost the turn, you can try an other turn.");
-		drawcounter = 0;
+		
 	}
+	console.log("l")
 }
 
 $('.clickchoice').click(function() {
 	var choice = $(this).attr('id');
 	var compchoice = randomChoices();
 	if (choice === "rock") {
-		
-		if (compchoice === "p") {
+		if (compchoice === paper) {
 			loss();
+			$("#rock").css("border", "3px solid red");
+			setTimeout(function() {
+				$("#rock").css("border", "0px solid red");
+			}, 800);
+			compchoice.css("border", "3px solid green");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid green");
+			}, 800);
 		}
-		if (compchoice === "s") {
+		if (compchoice === scissors) {
 			win();
+			$("#rock").css("border", "3px solid green");
+			setTimeout(function() {
+				$("#rock").css("border", "0px solid green");
+			}, 800);
+			compchoice.css("border", "3px solid red");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid red");
+			}, 800);
 		}
-		else {
+		if (compchoice === rock) {
 			draw();
+			$("#rock").css("border", "3px solid grey");
+			setTimeout(function() {
+				$("#rock").css("border", "0px solid grey");
+			}, 800);
+			compchoice.css("border", "3px solid grey");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid grey");
+			}, 800);
 		}
+
 	}
 	if (choice === "paper") {
-		if (compchoice === "s") {
+		if (compchoice === scissors) {
 			loss();
+			$("#paper").css("border", "3px solid red");
+			setTimeout(function() {
+				$("#paper").css("border", "0px solid red");
+			}, 800);
+			compchoice.css("border", "3px solid green");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid green");
+			}, 800);
 		}
-		if (compchoice === "r") {
+		if (compchoice === rock) {
 			win();
+			$("#paper").css("border", "3px solid green");
+			setTimeout(function() {
+				$("#paper").css("border", "0px solid green");
+			}, 800);
+			compchoice.css("border", "3px solid red");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid red");
+			}, 800);
 		}
-		else {
+		if (compchoice === paper) {
 			draw();
+			$("#paper").css("border", "3px solid grey");
+			setTimeout(function() {
+				$("#paper").css("border", "0px solid grey");
+			}, 800);
+			compchoice.css("border", "3px solid grey");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid grey");
+			}, 800);
 		}
 	}
 	if (choice === "scissors") {
-		if (compchoice === "r") {
+		if (compchoice === rock) {
 			loss();
+			$("#scissors").css("border", "3px solid red");
+			setTimeout(function() {
+				$("#scissors").css("border", "0px solid red");
+			}, 800);
+			compchoice.css("border", "3px solid green");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid green");
+			}, 800);
 		}
-		if (compchoice === "w") {
+		if (compchoice === paper) {
 			win();
+			$("#scissors").css("border", "3px solid green");
+			setTimeout(function() {
+				$("#scissors").css("border", "0px solid green");
+			}, 800);
+			compchoice.css("border", "3px solid red");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid red");
+			}, 800);
 		}
-		else {
+		if (compchoice === scissors) {
 			draw();
+			$("#scissors").css("border", "3px solid grey");
+			setTimeout(function() {
+				$("#scissors").css("border", "0px solid grey");
+			}, 800);
+			compchoice.css("border", "3px solid grey");
+			setTimeout(function() {
+				compchoice.css("border", "0px solid grey");
+			}, 800);
 		}
 	}
 
